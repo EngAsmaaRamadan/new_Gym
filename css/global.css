@@ -1,3 +1,7 @@
+:root{
+	--main-color-red:#E31E1E;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -15,4 +19,10 @@ h4,
 h5,
 h6{
 	font-family: "Sora", sans-serif;
+}
+
+.container{
+	width: 85%;
+	max-width: 1300px;
+	margin: auto;
 }
