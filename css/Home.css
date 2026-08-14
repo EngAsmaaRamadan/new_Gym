@@ -29,18 +29,23 @@ header nav {
 
 header nav .container{
 	display: flex;
+	width: 90%;
 	justify-content: space-between;
 	padding-block: 28px;
 }
 
-header nav ul {
+header nav .container .button{
+	display: none;
+}
+
+header nav .container ul {
 	display: flex;
 	align-items: end;
 	flex-direction: row;
 	column-gap: 26px;
 }
 
-header nav ul li{
+header nav .container ul li{
 	list-style: none;
 	color: #e0dddd;
 	font-weight: 800;
@@ -49,17 +54,17 @@ header nav ul li{
 	cursor: pointer;
 }
 
-header nav ul .button{
+header nav .container ul .button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-header nav ul .button input{
+header nav .container ul .button input{
 	display: none;
 }
 
-header nav ul .button .toggle::before{
+header nav .container ul .button .toggle::before{
 	content: "";
 	display: block;
 	width: 20px;
@@ -72,7 +77,7 @@ header nav ul .button .toggle::before{
 	transition-duration:1s;
 }
 
-header nav ul .button .toggle{
+header nav .container ul .button .toggle{
 	width: 60px;
 	height: 30px;
 	background-color: #000;
@@ -82,11 +87,11 @@ header nav ul .button .toggle{
 	cursor: pointer;
 }
 
-header nav ul .button input:checked + .toggle{
+header nav .container ul .button input:checked + .toggle{
 	border-color: #00f;
 }
 
-header nav ul .button input:checked + .toggle::before{
+header nav .container ul .button input:checked + .toggle::before{
 	background-color: #00f;
 	right: 5px;
 	left: initial;
@@ -184,4 +189,28 @@ header>.container .content button:hover::after{
 	animation-delay: 1s;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
+}
+
+.arrow{
+	position: fixed;
+	bottom: 60px;
+	right: -7.6%;
+	transition-duration: 0.5s;
+}
+
+.arrow a{
+	background-color: var(--main-color-red);
+	padding: 10px 15px;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 10px 0 0 10px;
+	transition-duration: 0.5s;
+}
+
+.arrow:hover a{
+	background-color: #be1d1d;
+}
+
+.arrow:hover{
+	right: 0;
 }
